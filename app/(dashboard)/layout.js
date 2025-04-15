@@ -5,19 +5,19 @@ import { Providers } from "./providers";
 import { Suspense } from "react";
 import { WalletProvider } from "../_contexts/WalletContext";
 
-export default function Layout({ children }) {
+export const metadata = { title: "Dashboard" };
+
+export default function DashboardLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
-        <Providers>
-          <WalletProvider>
-            <Suspense fallback={<Spinner />}>
-              <DashboardHeader />
-              <main>{children}</main>
-            </Suspense>
-          </WalletProvider>
-        </Providers>
-      </body>
-    </html>
+    <>
+      <Providers>
+        <WalletProvider>
+          <Suspense fallback={<Spinner />}>
+            <DashboardHeader />
+            <main>{children}</main>
+          </Suspense>
+        </WalletProvider>
+      </Providers>
+    </>
   );
 }

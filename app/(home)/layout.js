@@ -4,21 +4,15 @@ import HomeFooter from "../_components/HomeFooter";
 import HomeHeader from "../_components/HomeHeader";
 
 export const metadata = {
-  title: {
-    template: "%s | Insurance",
-    default: "Insurance",
-  },
-  description: "Decen Insurance Claim",
+  title: "Home",
 };
 
-export default function RootLayout({ children }) {
+export default function HomeLayout({ children }) {
   return (
-    <html lang="en">
-      <body className="flex flex-col min-h-screen">
-        <HomeHeader />
-        <main className="flex-1">{children}</main>
-        <HomeFooter />
-      </body>
-    </html>
+    <>
+      <HomeHeader />
+      <main className="flex-1">{children}</main>
+      <HomeFooter />
+    </>
   );
 }

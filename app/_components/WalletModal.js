@@ -4,6 +4,7 @@ import { createPortal } from "react-dom";
 import { useWallet } from "../_contexts/WalletContext";
 import { useEffect, useRef } from "react";
 import WalletOptions from "./WalletOptions";
+import { useAccountEffect } from "wagmi";
 
 function WalletModal() {
   const { isOpen, closeModal } = useWallet();
@@ -17,6 +18,18 @@ function WalletModal() {
       closeModal();
     }
   };
+
+  useAccountEffect({
+    onConnect() {
+      closeModal();
+      //this too
+      alert("Wallet Connected");
+    },
+    onDisconnect() {
+      //make this good
+      alert("Wallet Disconnected");
+    },
+  });
 
   useEffect(() => {
     const handleEscKey = (event) => {

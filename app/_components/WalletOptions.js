@@ -6,6 +6,16 @@ import { useWallet } from "../_contexts/WalletContext";
 
 function WalletOptions() {
   const { closeModal } = useWallet();
+  // const { connect, connectors } = useConnect({
+  //   onSuccess: () => {
+  //     closeModal();
+  //     alert("Wallet Connected");
+  //   },
+  //   onError: () => {
+  //     alert("Failed to connect, try again");
+  //   },
+  // });
+
   const { connect, connectors } = useConnect();
 
   return (

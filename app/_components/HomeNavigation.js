@@ -31,7 +31,7 @@ function HomeNavigation() {
         </li>
         <li>
           <Link
-            href="/login"
+            href="/sign-in"
             className="bg-white text-emerald-600 border border-emerald-600 hover:bg-emerald-600 hover:text-white px-5 py-2 rounded-md font-medium transition-colors duration-300"
           >
             Login

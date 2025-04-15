@@ -30,7 +30,7 @@ import WalletModal from "@/app/_components/WalletModal";
 export default function Page() {
   return (
     <div className="max-w-6xl mx-auto bg-white rounded-xl shadow-sm p-6 border border-emerald-50">
-      <span className="text-emerald-700 font-medium">Page</span>
+      <span className="text-emerald-700 font-medium">Dashboard</span>
       <WalletModal />
     </div>
   );
