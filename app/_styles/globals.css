@@ -1,1 +1,13 @@
 @import "tailwindcss";
+body {
+  @apply bg-gray-50 text-gray-900 font-sans;
+}
+
+main {
+  @apply min-h-[calc(100vh-64px)] p-6;
+}
+
+/* Spinner styling (if needed) */
+.spinner {
+  @apply border-emerald-500 border-t-transparent;
+}
