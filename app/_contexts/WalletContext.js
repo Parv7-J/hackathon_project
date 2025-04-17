@@ -8,7 +8,6 @@ const WalletContext = createContext();
 
 function WalletProvider({ children }) {
   const account = useAccount();
-
   const [isOpen, setIsOpen] = useState(false);
   const closeModal = () => {
     setIsOpen(false);
