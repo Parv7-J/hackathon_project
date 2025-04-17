@@ -107,22 +107,10 @@ export default function WalletPage() {
               </div>
             </div>
           </div>
-
-          <div className="mt-8 pt-6 border-t border-gray-100">
-            <button
-              onClick={() => disconnect()}
-              className="px-4 py-2 bg-red-50 text-red-600 rounded-lg hover:bg-red-100 transition-colors"
-            >
-              Disconnect Wallet
-            </button>
-          </div>
         </div>
       ) : (
         <div className="bg-white p-6 rounded-xl shadow-sm text-center">
           <div className="text-gray-500 mb-4">No wallet connected</div>
-          <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-            Connect Wallet
-          </button>
         </div>
       )}
     </div>

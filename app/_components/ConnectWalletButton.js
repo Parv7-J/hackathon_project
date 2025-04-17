@@ -2,6 +2,8 @@
 
 import { useAccount, useDisconnect } from "wagmi";
 import { useWallet } from "../_contexts/WalletContext";
+import { toast } from "sonner";
+import { CustomToast } from "./CustomToast";
 
 function ConnectWalletButton() {
   const { setIsOpen } = useWallet();
@@ -9,9 +11,18 @@ function ConnectWalletButton() {
   const { disconnect } = useDisconnect();
 
   const handleDisconnect = () => {
-    if (confirm("Do you wish to disconnect your wallet?")) {
-      disconnect();
-    }
+    toast.custom((t) => (
+      <CustomToast
+        message="Disconnect Wallet?"
+        action={{
+          label: "Proceed",
+          onClick: () => {
+            disconnect();
+            toast.dismiss(t);
+          },
+        }}
+      />
+    ));
   };
 
   return account.status === "connected" ? (
